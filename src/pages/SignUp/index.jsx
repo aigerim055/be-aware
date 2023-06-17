@@ -53,7 +53,6 @@ const SignUp = () => {
             await dispatch(authRegisterUser(transformData))
             setUserData(data.username)
             setUserType(data.type)
-            console.log(data)
             // router.push('/')
         } catch (err) {
             console.log(err)
