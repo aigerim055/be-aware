@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: inter, sans-serif;
+    /*box-sizing: border-box;*/
+}
+
+header{
+    width: 1400px;
+}
+
+.header-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0px 0 40px;
+}
+
+
+h1{
+    font-family: Inter, sans-serif;
+    font-style: semi bold;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+}
+
+.header-search{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    border: 2px solid
+    #9A9A9A;
+    border-radius: 20px;
+    width: 370px;
+}
+.searchLogo{
+    padding: 5px 10px;
+}
+
+.searchLogo button{
+    background: unset;
+    border: none;
+    padding: 5px;
+}
+
+input{
+    border: none;
+    outline: none;
+    background: unset;
+    font-size: 25px;
+    font-style: regular;
+}
+
+.header-publish button{
+    border: none;
+    background: white;
+    font-size: 25px;
+    padding: 5px 10px;
+    background: unset;
+}
+
+.header-publish{
+    display: flex;
+    border: 1px solid
+    #282828;
+    border-radius: 20px;
+    width: 274px;
+}
+
+.innpublish{
+    padding: 11px;
+}
+
+.changer-header{
+    display: flex;
+    gap: 30px;
+    padding-right: 40px;
+}
+
+.changer-header button{
+    background: unset;
+    border: none;
+    font-size: 30px;
+    font-family: Inter, sans-serif;
+    font-style: Medium;
+    font-weight: 500;
+}
