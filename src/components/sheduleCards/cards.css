@@ -1,0 +1,57 @@
+.cards-time-table {
+    display: flex;
+    background: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 30px;
+}
+
+.date h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 73px;
+    margin: 0;
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-right: 30px;
+}
+
+.date::after {
+    content: '';
+    position: absolute;
+    height: 86px;
+    width: 1px;
+    background: #9A9A9A;
+    top: 0;
+    right: -30px;
+    opacity: 0.8;
+}
+
+.date p {
+    margin-top: -15px;
+}
+
+.place {
+    margin: 0 30px;
+    color: #7D7D7D;
+}
+
+.place p {
+    padding: 5px 0;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
