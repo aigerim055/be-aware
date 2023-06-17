@@ -5,7 +5,8 @@ const initialState = {
     error: null,
     isAuthenticated: false,
     user: null,
-    token: null
+    token: null,
+    responseMessage: null,
 }
 const authReducers = (state = initialState, action) => {
     switch (action.type) {
@@ -40,7 +41,7 @@ const authReducers = (state = initialState, action) => {
                 ...state,
                 loading: false,
                 isAuthenticated: true,
-                user: action.payload,
+                responseMessage: action.payload,
                 error: null
             }
         case AUTH_REGISTER.ERROR:
