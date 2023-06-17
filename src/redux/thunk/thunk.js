@@ -26,9 +26,9 @@ const authRegisterUser = (data) => async (dispatch) => {
 const authLoginUser = (data) => async (dispatch) => {
     dispatch(authLoginRequestActionCreator())
     try {
-        const res = await http.post("http://13.115.195.252/account/token/", data)
+        const res = await http.post("http://34.218.247.20/account/login/", data)
         dispatch(authLoginSuccessActionCreator())
-        setToken(res.data.token)
+        setToken(res.data.access)
     } catch (err) {
         dispatch(authLoginErrorActionCreator(err.response.data.non_field_errors))
         throw err
