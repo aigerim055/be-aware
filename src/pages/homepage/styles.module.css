@@ -4,7 +4,16 @@
 }
 .visibleAuth{
     display: block;
+    /* position: relative; */
 }
 .notVisibleAuth{
     display: none;
+}
+.closeIconWrap{
+    position: absolute;
+    right: 38%;
+    top:20%
+}
+.closeIcon{
+    font-size: 30px !important;
 }
