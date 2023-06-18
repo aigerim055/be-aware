@@ -1,0 +1,10 @@
+.homepageOverlay{
+    background: rgba(49,49,49,0.8);
+    height: 100vh;
+}
+.visibleAuth{
+    display: block;
+}
+.notVisibleAuth{
+    display: none;
+}

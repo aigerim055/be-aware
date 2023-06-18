@@ -82,29 +82,29 @@ const SignUp = () => {
 
 
     return (
-        <>
+        <div className={styles.modal_content}>
             <div className={closedModalWindow ? styles.signUpForm : styles.notVisibleSignUpForm}>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <div className={''}>Регистрация</div>
-                    <div>
+                    <div className={styles.mainText}>Регистрация</div>
+                    <div >
                         <input
-                            className={''}
+                            className={styles.inputAuth}
                             {...register("email")}
-                            placeholder="Email" />
+                            placeholder="Email *" />
                         {errors.email && <p style={{ color: "red" }}>{errors.email.message}</p>}
                     </div>
                     <div>
                         <input
-                            className={''}
+                            className={styles.inputAuth}
                             {...register("username")}
-                            placeholder="Ваше имя" />
+                            placeholder="Ваше имя *" />
                         {errors.username && <p style={{ color: "red" }}> {errors.username.message}</p>}
                     </div>
                     <div className={''}>
                         <input
-                            className={''}
+                            className={styles.inputAuth}
                             {...register("password")}
-                            placeholder="Пароль"
+                            placeholder="Пароль *"
                         // type={visibility ? 'text' : 'password'} 
                         />
                         {errors.password && <p style={{ color: "red" }}>{errors.password.message}</p>}
@@ -112,35 +112,35 @@ const SignUp = () => {
                     </div>
                     <div className={''}>
                         <input
-                            className={''}
+                            className={styles.inputAuth}
                             {...register("password_2")}
-                            placeholder="Повторите Пароль"
+                            placeholder="Повторите Пароль *"
                         // type={visibility2 ? 'text' : 'password'} 
                         />
                         {errors.password_2 && <p style={{ color: "red" }}>{errors.password_2.message}</p>}
 
                     </div>
-                    <div>
+                    <div  className={styles.selectAuthWrap}>
                         <select
-                            className={"custom-select"}
+                            className={styles.selectAuth}
                             id="selectType"
                             defaultValue="User"
                             name="User"
                             {...register("type")}
                         >
                             <option value="" disabled>Select Type</option>
-                            <option value="User">User</option>
-                            <option value="Service">Service</option>
+                            <option value="user">User</option>
+                            <option value="service">Service</option>
                         </select>
                     </div>
-                    <div className={''}>
+                    <div className={styles.secondaryTextAuth}>
                         <p>Уже есть аккаунт? <Link to="/sign-in">Войти</Link></p>
                     </div>
                     <button
                         type="submit"
-                        className={''}
+                        className={styles.buttonAuth}
                     >Зарегистрироваться </button>
-                    <div className={''}>
+                    <div className={styles.secondaryTextAuth}>
                         <Link to="/">Отмена</Link>
                     </div>
                 </form>
@@ -151,7 +151,7 @@ const SignUp = () => {
                 <p>Thanks for registration. Activate your account via link in your email.</p>
                 <Link to="/sign-in">Войти</Link>
             </div>
-        </>
+        </div>
     );
 };
 

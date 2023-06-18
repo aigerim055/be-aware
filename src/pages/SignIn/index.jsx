@@ -24,11 +24,11 @@ const SignInPage = () => {
     const navigate = useNavigate();
     const errorMsg = useSelector(errorMessage)
     const [userName, setUserName] = useState('')
-    const [visibility, setVisibility] = useState(false);
+    // const [visibility, setVisibility] = useState(false);
     const { authLoginUser } = authLoginOperations
-    const handleVisibility = () => {
-        setVisibility(!visibility)
-    }
+    // const handleVisibility = () => {
+    //     setVisibility(!visibility)
+    // }
     const {
         register,
         handleSubmit,
@@ -67,12 +67,12 @@ const SignInPage = () => {
     }, [errorMsg])
     return (
         <div>
-            <div className={styles.container}>
+            <div className={styles.modal_content}>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <div className={styles.containerLabel}>Вход </div>
+                    <div className={styles.mainText}>Вход </div>
                     <div>
                         <input
-                            className={styles.inputForm}
+                            className={styles.inputAuth}
                             {...register("username")}
                             placeholder="Логин"
                             value={`${userName}` || ''}
@@ -80,16 +80,16 @@ const SignInPage = () => {
                         {errors.username && <p style={{ color: "red" }}>{errors.username.message}</p>}
                     </div>
 
-                    <div className={styles.passwordWrap}>
+                    <div className={''}>
                         <input
-                            className={styles.inputForm}
+                            className={styles.inputAuth}
                             {...register("password")}
                             placeholder="Пароль"
-                            type={visibility ? 'text' : 'password'} />
+                            type={'text'} />
                         {errors.password && <p style={{ color: "red" }}>{errors.password.message}</p>}
 
                     </div>
-                    <div className={styles.bottomText}>
+                    <div className={styles.secondaryTextAuth}>
                         <p>
                             Еще не зарегистрированы?
                         </p>
@@ -101,9 +101,9 @@ const SignInPage = () => {
 
                     <button
                         type="submit"
-                        className={styles.submitButton}
+                        className={styles.buttonAuth}
                     >Войти</button>
-                    <div className={styles.cancelButton}>
+                    <div className={styles.secondaryTextAuth}>
                         <Link to="/">Отмена</Link>
                     </div>
                 </form>
