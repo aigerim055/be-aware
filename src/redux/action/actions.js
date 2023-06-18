@@ -1,6 +1,8 @@
-import {AUTH_LOGIN,
+import {
+    AUTH_LOGIN,
     AUTH_LOGOUT,
-    AUTH_REGISTER,} from '../types/types'
+    AUTH_REGISTER, GET_ALL_NEWS, GET_IMPORTANT_NEWS, GET_POST_BY_SLUG,
+} from '../types/types'
 
 
 
@@ -46,6 +48,21 @@ const authLogoutActionCreator = () => ({
 
 
 //---
+
+
+export const GetAllNews = () => ({
+    type: GET_ALL_NEWS
+})
+
+export const getImportantNews = () => ({
+    type: GET_IMPORTANT_NEWS
+})
+
+export const getPostBySlug = () => (
+    {
+        type: GET_POST_BY_SLUG
+    }
+)
 
 export {
     authLoginRequestActionCreator,

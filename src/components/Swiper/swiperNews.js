@@ -32,12 +32,12 @@ export default function SwiperNews({info}) {
                 className="mySwiper"
             >
                 {
-                    info.map(el =>
+                    info?.map(el =>
                         <div key={el.id}>
                             <SwiperSlide>
                                 <div className={'swiper-desk'}>
                                     <h2>{el.title}</h2>
-                                    <p>{el.text}</p>
+                                    <p>{el.content}</p>
                                 </div>
                             </SwiperSlide>
                         </div>

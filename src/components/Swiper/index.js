@@ -1,15 +1,11 @@
-import React, {useEffect} from 'react';
-import {useDispatch, useSelector} from "react-redux";
+import React from 'react';
+import {useSelector} from "react-redux";
 import SwiperNews from "./swiperNews";
-import {getInfo} from "../../store/swiperAction/actionSwiper";
 
 const SwiperLine = () => {
-    const dispatch = useDispatch()
-    const info = useSelector(state => state.info)
-    useEffect(() => {
-        dispatch(getInfo())
-    },[dispatch])
-    console.log(info, 'info')
+
+    const info = useSelector(state => state.important_news)
+
     return (
         <div>
             <SwiperNews info={info}/>

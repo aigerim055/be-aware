@@ -1,13 +1,30 @@
 import React from 'react';
 import Post from "../post";
+import {useSelector} from "react-redux";
+import Icon from "../icons/newspaper.png";
 
 const Newsline = () => {
+
+    const news = useSelector(state => state.news.news).data
+    // console.log(news)
+
+
     return (
         <section className={'post-section'}>
-            <div className={'container'}>
+
+            <div className={''}>
                 <div className={'home-page'}>
+                    {/*<div className="lenta-header">*/}
+                    {/*    <div>*/}
+                    {/*        <img src={Icon} alt=""/>*/}
+                    {/*    </div>*/}
+                    {/*    <div>*/}
+                    {/*        <h3>Лента</h3>*/}
+                    {/*        <p>Здесь будут публиковаться новости</p>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                     {
-                        posts.map((post, idx) => (
+                        news?.map((post, idx) => (
                             <Post post={post} idx={idx}/>
                         ))
                     }
@@ -21,42 +38,3 @@ const Newsline = () => {
 
 
 export default Newsline;
-
-const posts = [
-    {
-        'id': 1,
-        'title': 'Подача питьевой воды в жилой массив «Арча-Бешик» будет подаваться по графику',
-        'subtitle': 'Как сообщают в производственно-эксплуатационном управлении «Бишкекводоканал», питьевая вода в жилой массив «Арча-Бешик» будет подаваться по определённому графику.',
-        'user': 'Мэрия города Бишкек',
-        'date': '14.06.2023',
-        'views': 100999,
-        'likes': 56,
-        'comments': 2,
-        'is_favorite': false,
-        'img': 'https://www.gorod.dp.ua/pic/news/newsimages/0119/155236_large.jpg'
-    },
-    {
-        'id': 2,
-        'title': 'Подача питьевой воды в жилой массив «Арча-Бешик» будет подаваться по графику',
-        'subtitle': 'Как сообщают в производственно-эксплуатационном управлении «Бишкекводоканал», питьевая вода в жилой массив «Арча-Бешик» будет подаваться по определённому графику.',
-        'user': 'Мэрия города Бишкек',
-        'date': '14.06.2023',
-        'views': 1000,
-        'likes': 56,
-        'comments': 2,
-        'is_favorite': false,
-        'img': 'https://www.gorod.dp.ua/pic/news/newsimages/0119/155236_large.jpg'
-    },
-    {
-        'id': 3,
-        'title': 'Подача питьевой воды в жилой массив «Арча-Бешик» будет подаваться по графику',
-        'subtitle': 'Как сообщают в производственно-эксплуатационном управлении «Бишкекводоканал», питьевая вода в жилой массив «Арча-Бешик» будет подаваться по определённому графику.',
-        'user': 'Мэрия города Бишкек',
-        'date': '14.06.2023',
-        'views': 1000,
-        'likes': 56,
-        'comments': 2,
-        'is_favorite': false,
-        'img': 'https://www.gorod.dp.ua/pic/news/newsimages/0119/155236_large.jpg'
-    }
-]
