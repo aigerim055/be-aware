@@ -2,15 +2,18 @@ import React from 'react';
 import Post from "../post";
 import {useSelector} from "react-redux";
 import Icon from "../icons/newspaper.png";
+import styles from './styles.module.css'
+import { buttonClicked } from '../../redux/selectors/selectors';
 
 const Newsline = () => {
-
+    const buttonClick = useSelector(buttonClicked)
     const news = useSelector(state => state.news.news).data
     // console.log(news)
 
 
     return (
-        <section className={'post-section'}>
+ 
+    <section className={buttonClick? styles.postSection_notV : styles.postSection}>
 
             <div className={''}>
                 <div className={'home-page'}>
