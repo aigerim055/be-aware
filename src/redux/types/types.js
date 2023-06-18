@@ -13,6 +13,7 @@ const AUTH_REGISTER ={
 }
 
 const AUTH_LOGOUT='AUTH_LOGOUT'
+export const BUTTON_CLICKED = 'BUTTON_CLICKED'
 
 
 export {
@@ -21,9 +22,11 @@ export {
     AUTH_LOGOUT,
 }
 
+
 export const GET_ALL_NEWS = 'GET_ALL_NEWS'
 
 
 export const GET_IMPORTANT_NEWS = 'GET_IMPORTANT_NEWS'
 
 export const GET_POST_BY_SLUG = 'GET_POST_BY_SLUG'
+

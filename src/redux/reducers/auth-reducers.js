@@ -1,4 +1,4 @@
-import { AUTH_LOGIN, AUTH_LOGOUT, AUTH_REGISTER } from "../types/types"
+import { AUTH_LOGIN, AUTH_LOGOUT, AUTH_REGISTER, BUTTON_CLICKED } from "../types/types"
 
 const initialState = {
     loading: false,
@@ -7,6 +7,7 @@ const initialState = {
     user: null,
     token: null,
     responseMessage: null,
+    buttonClicked: false,
 }
 const authReducers = (state = initialState, action) => {
     switch (action.type) {
@@ -14,14 +15,14 @@ const authReducers = (state = initialState, action) => {
             return {
                 ...state,
                 loading: true,
-                error:null,
+                error: null,
             }
         case AUTH_LOGIN.SUCCESS:
             return {
                 ...state,
                 loading: false,
                 token: action.payload,
-                error:null,
+                error: null,
                 isAuthenticated: true
             }
         case AUTH_LOGIN.ERROR:
@@ -34,7 +35,7 @@ const authReducers = (state = initialState, action) => {
             return {
                 ...state,
                 loading: true,
-                error:null,
+                error: null,
             }
         case AUTH_REGISTER.SUCCESS:
             return {
@@ -59,6 +60,11 @@ const authReducers = (state = initialState, action) => {
                 isAuthenticated: false,
                 loading: false
             }
+        case BUTTON_CLICKED:
+            return {
+                ...state,
+                buttonClicked: true,
+            };
         default:
             return state
     }

@@ -1,7 +1,11 @@
 import {
     AUTH_LOGIN,
     AUTH_LOGOUT,
-    AUTH_REGISTER, GET_ALL_NEWS, GET_IMPORTANT_NEWS, GET_POST_BY_SLUG,
+    AUTH_REGISTER,
+    GET_ALL_NEWS,
+    GET_IMPORTANT_NEWS,
+    GET_POST_BY_SLUG,
+    BUTTON_CLICKED,
 } from '../types/types'
 
 
@@ -48,6 +52,9 @@ const authLogoutActionCreator = () => ({
 
 
 //---
+const buttonClickedActionCreator = () => ({
+    type: BUTTON_CLICKED
+});
 
 
 export const GetAllNews = () => ({
@@ -74,4 +81,6 @@ export {
     authRegisterErrorActionCreator,
 
     authLogoutActionCreator,
+
+    buttonClickedActionCreator
 }
