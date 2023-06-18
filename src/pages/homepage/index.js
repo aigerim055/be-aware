@@ -14,7 +14,6 @@ const HomePage = () => {
     const info = useSelector(state => state.important_news)
 
 
-
     return (
         <div>
             <div className="container">
