@@ -44,20 +44,6 @@ const EventsPage = () => {
                             {/*<Newsline />*/}
                             <div className={''}>
                                 <div className={'home-page'}>
-                                    {/*<div className="lenta-header">*/}
-                                    {/*    <div>*/}
-                                    {/*        <img src={Icon} alt=""/>*/}
-                                    {/*    </div>*/}
-                                    {/*    <div>*/}
-                                    {/*        <h3>Лента</h3>*/}
-                                    {/*        <p>Здесь будут публиковаться новости</p>*/}
-                                    {/*    </div>*/}
-                                    {/*</div>*/}
-                                    {/*{*/}
-                                    {/*    news?.map((post, idx) => (*/}
-                                    {/*        */}
-                                    {/*    ))*/}
-                                    {/*}*/}
                                     <EventCards />
                                 </div>
                             </div>

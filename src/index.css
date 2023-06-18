@@ -55,3 +55,24 @@ body {
 .event-cards {
   width: 1060px;
 }
+
+.content {
+  width: 1060px;
+}
+
+.card-retrieve {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.card-retrieve img {
+  width: 1000px;
+ border-radius: 30px;
+  max-width: 100%;
+  margin: 15px 0;
+}
+
+.card-retrieve p {
+  font-size: 20px;
+}
