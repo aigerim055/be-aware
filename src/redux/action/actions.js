@@ -1,6 +1,9 @@
-import {AUTH_LOGIN,
+import {
+    AUTH_LOGIN,
     AUTH_LOGOUT,
-    AUTH_REGISTER,} from '../types/types'
+    AUTH_REGISTER,
+    BUTTON_CLICKED
+} from '../types/types'
 
 
 
@@ -46,6 +49,9 @@ const authLogoutActionCreator = () => ({
 
 
 //---
+const buttonClickedActionCreator = () => ({
+    type: BUTTON_CLICKED
+});
 
 export {
     authLoginRequestActionCreator,
@@ -57,4 +63,6 @@ export {
     authRegisterErrorActionCreator,
 
     authLogoutActionCreator,
+
+    buttonClickedActionCreator
 }
