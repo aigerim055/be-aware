@@ -63,7 +63,7 @@ const authReducers = (state = initialState, action) => {
         case BUTTON_CLICKED:
             return {
                 ...state,
-                buttonClicked: true,
+                buttonClicked: !state.buttonClicked,
             };
         default:
             return state

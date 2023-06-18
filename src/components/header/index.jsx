@@ -15,7 +15,6 @@ const Header = () => {
     const buttonClick = useSelector(buttonClicked)
     const handleButtonClick = () => {
         dispatch(buttonClickedActionCreator())
-        console.log(buttonClick)
     }
 
     return (
