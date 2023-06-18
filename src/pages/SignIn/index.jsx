@@ -75,7 +75,7 @@ const SignInPage = () => {
                             className={styles.inputAuth}
                             {...register("username")}
                             placeholder="Логин"
-                            value={`${userName}` || ''}
+                            // value={`${userName}` || ''}
                         />
                         {errors.username && <p style={{ color: "red" }}>{errors.username.message}</p>}
                     </div>

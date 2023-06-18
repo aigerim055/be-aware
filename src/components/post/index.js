@@ -32,7 +32,7 @@ const Post = ({ post, idx }) => {
                     <h6>{post.title}</h6>
                     <p>{post.content}</p>
                 </div>
-                <div className={styles.card_img}>
+                <div className={buttonClick? styles.card_img_none: styles.card_img}>
                     <img src={post.image} alt="" />
                 </div>
             </div>

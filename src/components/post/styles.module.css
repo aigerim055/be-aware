@@ -7,7 +7,8 @@
     border-radius: 20px;
     padding: 30px;
 }
-.post_card_NotVisible{
+
+.post_card_NotVisible {
     margin-bottom: 40px;
     /* background: rgba(49,49,49,0.8); */
     /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); */
@@ -52,11 +53,21 @@
     justify-content: space-between;
 }
 
-.card_img  img{
+.card_img img {
     width: 180px;
     height: 170px;
     border-radius: 20px;
     object-fit: cover;
+    /* opacity: 0.2; */
+    /* display: none; */
+}
+
+.card_img_none img {
+    width: 180px;
+    height: 170px;
+    border-radius: 20px;
+    object-fit: cover;
+    opacity: 0.2;
 }
 
 .card_desc h6 {

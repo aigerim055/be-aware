@@ -14,8 +14,7 @@
 
 .closeIconWrap {
     position: absolute;
-    right: 38%;
-    top: 20%
+    right: 35%;
 }
 
 .closeIcon {
@@ -33,7 +32,7 @@
 }
 
 .main_section_notV {
-    background: rgba(49, 49, 49, 0.8);
+    background: rgba(49, 49, 49, 0);
     height: 100vh;
     padding-top: 30px;
     display: flex;
