@@ -7,6 +7,8 @@ import {
     authRegisterSuccessActionCreator } from "../action/actions"
 import {setToken} from "../../services/token";
 import http from "../../services/api/index"
+import axios from "axios";
+import {GET_ALL_NEWS, GET_IMPORTANT_NEWS, GET_POST_BY_SLUG} from "../types/types";
 
 
 
@@ -37,3 +39,40 @@ const authLoginUser = (data) => async (dispatch) => {
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default { authRegisterUser, authLoginUser}
+
+
+
+
+
+// ______________________ news ___________________
+
+export const getNews = () => {
+    return (dispatch) => {
+        axios.get('http://34.218.247.20/feed/news')
+            .then(data =>{
+                dispatch({type: GET_ALL_NEWS, payload: data})
+            })
+    }
+
+}
+
+
+export const getImportantNews = () => {
+    return (dispatch) => {
+        axios.get('http://34.218.247.20/feed/important/important/')
+            .then(data =>{
+                dispatch({type: GET_IMPORTANT_NEWS, payload: data.data})
+            })
+    }
+
+}
+
+
+export const getPostBySlug = (slug) => {
+    return (dispatch) => {
+        axios.get(`http://34.218.247.20/feed/news/${slug}`)
+            .then(data =>{
+                dispatch({type: GET_POST_BY_SLUG, payload: data.data})
+            })
+    }
+}
