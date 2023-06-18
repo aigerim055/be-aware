@@ -27,10 +27,10 @@ const HomePage = () => {
 
 
     return (
-        <div className={buttonClick ? styles.homepageOverlay : styles.homepage}>
-            <div className="container">
+        <div className={buttonClick ? styles.homepageOverlay : styles.homepage} >
+            <div className='container'>
                 <Header />
-            </div>
+           
             <div className={buttonClick ? styles.visibleAuth : styles.notVisibleAuth}>
                 <div className={styles.closeIconWrap}>
                     <CancelRoundedIcon onClick={handleButtonClick} className={styles.closeIcon} />
@@ -38,9 +38,10 @@ const HomePage = () => {
                 <SignUp />
             </div>
 
-            <section className={'main-section'}>
+            <section 
+            className={buttonClick ? styles.main_section_notV : styles.main_section}>
                 <div className="container">
-                    <div className="main-section">
+                    <div  className={buttonClick ? styles.main_section_notV: styles.main_section}>
                         <SideBar />
                         <div className="content">
                             {/*<SwiperNews info={info}/>*/}
@@ -49,6 +50,7 @@ const HomePage = () => {
                     </div>
                 </div>
             </section>
+        </div>
         </div>
 
     );

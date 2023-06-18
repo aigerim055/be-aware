@@ -1,60 +1,65 @@
 /* post-card */
 
-.post-card {
+.post_card {
     margin-bottom: 40px;
     background: #FFFFFF;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    padding: 30px;
+}
+.post_card_NotVisible{
+    margin-bottom: 40px;
+    /* background: rgba(49,49,49,0.8); */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); */
     border-radius: 20px;
 
     padding: 30px;
 }
 
-.post-card-header {
+.post_card_header {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.post-card-views {
+.post_card_views {
     display: flex;
     align-items: center;
     gap: 5px;
-
     margin-left: 10px;
-
     font-size: 16px;
     line-height: 19px;
     color: #7D7D7D;
 }
 
-.post-user {
+.post_user {
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
     color: #000000;
 }
 
-.post-card-date {
+.post_card_date {
     font-size: 16px;
     line-height: 19px;
     color: #000000;
     opacity: 0.6;
 }
 
-.card-main {
+.card_main {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.card-img  img{
+.card_img  img{
     width: 180px;
     height: 170px;
     border-radius: 20px;
     object-fit: cover;
 }
 
-.card-desc h6 {
+.card_desc h6 {
     font-weight: 600;
     font-size: 25px;
     line-height: 30px;
@@ -64,7 +69,7 @@
     margin-top: 20px;
 }
 
-.card-desc p {
+.card_desc p {
     font-size: 18px;
     line-height: 22px;
     color: #000000;

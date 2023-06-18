@@ -1,19 +1,48 @@
-.homepageOverlay{
-    background: rgba(49,49,49,0.8);
-    height: 100vh;
+.homepageOverlay {
+    background: rgba(49, 49, 49, 0.8);
+    /* height: 100%; */
 }
-.visibleAuth{
+
+.visibleAuth {
     display: block;
     /* position: relative; */
 }
-.notVisibleAuth{
+
+.notVisibleAuth {
     display: none;
 }
-.closeIconWrap{
+
+.closeIconWrap {
     position: absolute;
     right: 38%;
-    top:20%
+    top: 20%
 }
-.closeIcon{
+
+.closeIcon {
     font-size: 30px !important;
 }
+
+.main_section {
+    background: #F5F5F5;
+    height: 100vh;
+    padding-top: 30px;
+    display: flex;
+    /*align-items: center;*/
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.main_section_notV {
+    background: rgba(49, 49, 49, 0.8);
+    height: 100vh;
+    padding-top: 30px;
+    display: flex;
+    /*align-items: center;*/
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  } */
