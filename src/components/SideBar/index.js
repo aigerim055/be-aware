@@ -1,12 +1,11 @@
-import React, {useState} from 'react';
-import HomeIcon from "../Icons/homeIcon";
-import EventIcon from "../Icons/eventIcon";
-import SavesIcon from "../Icons/savesIcon";
-import ComplaintsIcon from "../Icons/complaintsIcon";
+import React from 'react';
+import HomeIcon from "../icons/homeIcon";
+import EventIcon from "../icons/eventIcon";
+import SavesIcon from "../icons/savesIcon";
+import ComplaintsIcon from "../icons/complaintsIcon";
 import './sideBarStyle.css'
 import {NavLink} from "react-router-dom";
-import ClockIcon from "../Icons/clockIcon";
-import Footer from "../Footer";
+import ClockIcon from "../icons/clockIcon";
 const SideBar = ({children}) => {
 
     return (
@@ -19,7 +18,6 @@ const SideBar = ({children}) => {
                 <NavLink to={'/saves'} className={`btn-icons`} activeclassName={'active'}><SavesIcon/><h2>Сохраненные</h2></NavLink>
             </div>
             <main>{children}</main>
-            <Footer/>
         </div>
     );
 };
