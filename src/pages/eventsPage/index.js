@@ -8,6 +8,8 @@ import styles from "../homepage/styles.module.css";
 import Header from "../../components/header";
 import CancelRoundedIcon from "@mui/icons-material/CancelRounded";
 import SignUp from "../SignUp";
+import Post from "../../components/post";
+import EventCards from "../../components/eventCards";
 
 const EventsPage = () => {
     const dispatch = useDispatch()
@@ -39,7 +41,26 @@ const EventsPage = () => {
                         <SideBar />
                         <div className="content">
                             {/*<SwiperNews info={info}/>*/}
-                            <Newsline />
+                            {/*<Newsline />*/}
+                            <div className={''}>
+                                <div className={'home-page'}>
+                                    {/*<div className="lenta-header">*/}
+                                    {/*    <div>*/}
+                                    {/*        <img src={Icon} alt=""/>*/}
+                                    {/*    </div>*/}
+                                    {/*    <div>*/}
+                                    {/*        <h3>Лента</h3>*/}
+                                    {/*        <p>Здесь будут публиковаться новости</p>*/}
+                                    {/*    </div>*/}
+                                    {/*</div>*/}
+                                    {/*{*/}
+                                    {/*    news?.map((post, idx) => (*/}
+                                    {/*        */}
+                                    {/*    ))*/}
+                                    {/*}*/}
+                                    <EventCards />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
